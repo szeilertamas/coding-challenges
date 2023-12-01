@@ -1,11 +1,11 @@
 function rgb(r, g, b) {
-    function componentToHex(c) {
-      const hex = Math.max(0, Math.min(255, c)).toString(16).padStart(2, "0");
-      return c < 0 ? '00' : c > 255 ? 'FF' : hex;
-    }
-  
-    const hexValues = [r, g, b].map(componentToHex);
-    return hexValues.join("").toUpperCase();
+    return [
+      r < 0 ? '00' : r > 255 ? 'FF' : r.toString(16).padStart(2, "0"),
+      g < 0 ? '00' : g > 255 ? 'FF' : g.toString(16).padStart(2, "0"),
+      b < 0 ? '00' : b > 255 ? 'FF' : b.toString(16).padStart(2, "0"),
+    ]
+      .join("")
+      .toUpperCase();
   }
 
 //   The rgb function is incomplete.
