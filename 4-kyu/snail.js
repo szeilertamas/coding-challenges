@@ -18,7 +18,6 @@ snail = function (array) {
     }
     return result;
   };
-  
 // DESCRIPTION:
 // Snail Sort
 // Given an n x n array, return the array elements arranged from
